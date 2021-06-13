@@ -1,0 +1,25 @@
+<div class="container">
+    <h1> Get In Touch </h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="field">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" formControlName="name" required>
+            <mat-error *ngIf="contactForm.get('name').invalid"> {{getErrorMessage(contactForm.get('name'))}} </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="contactForm.get('email').invalid"> {{getErrorMessage(contactForm.get('email'))}} </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Message</mat-label>
+            <textarea matInput placeholder="Enter your message" rows=5 formControlName="message" required></textarea>
+            <mat-error *ngIf="contactForm.get('message').invalid"> {{getErrorMessage(contactForm.get('message'))}} </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" [disabled]="contactForm.invalid"> Submit </button>
+    </form>
+</div>

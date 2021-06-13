@@ -1,0 +1,19 @@
+h1{
+    font-size: 50px;
+    color: #424B54;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+}
+
+.container div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+mat-card{
+    height: 5em;
+    margin: 2em;
+    text-align: center;
+    background: transparent;
+    box-shadow: none;
+}

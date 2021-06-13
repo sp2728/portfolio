@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> Education </h1>
+  <ul>
+    <li class="school" *ngFor="let school of schools">
+      <div>
+        <h2> {{school.name | uppercase}} </h2>
+        <div class="courses">
+          <span class="course" *ngFor="let course of school.keyCourses">{{course}}</span>
+        </div>
+      </div>
+      <div class="details">
+        <p> Degree: {{school.degree}}</p>
+        <p> Major: {{school.major}}</p>
+        <p> Duration: {{school.startDate}} - {{school.endDate}} </p>
+      </div>
+    </li>
+  </ul>
+</div>

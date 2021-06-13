@@ -1,0 +1,71 @@
+{
+    "blogs":[
+        {
+            "name":"Best Way to Implement Angular Reactive Forms",
+            "link":"https://medium.com/geekculture/best-way-to-implement-angular-reactive-forms-c2918e3b3a5"
+        },
+        {
+            "name":"Best Javascript Array Methods for Angular Projects",
+            "link":"https://saikiran1298.medium.com/best-javascript-array-methods-for-angular-projects-c8de414c064b"
+        },
+        {
+            "name":"Form Validations in Angular8",
+            "link":"https://saikiran1298.medium.com/form-validations-in-angular-8-5d56b2fc29dc"
+        },
+        {
+            "name":"How to Integrate Razor Pay in Your Angular NodeJs Application",
+            "link":"https://medium.com/swlh/how-to-integrate-razor-pay-in-your-angular-nodejs-application-2714a09567b4"
+        },
+        {
+            "name":"Implementing Google Authentication in Angular and Node JS Application.",
+            "link":"https://saikiran1298.medium.com/implementing-google-authentication-in-angular-and-node-js-application-31f49301673c"
+        },
+        {
+            "name":"Integrate PassportJs Local Strategy into your Angular + NodeJs applications [MEAN stack]",
+            "link":"https://saikiran1298.medium.com/integrate-passportjs-local-strategy-into-your-angular-nodejs-applications-mean-stack-178868301842"
+        },
+        {
+            "name":"Integrating Stripe Payments into Angular and Nodejs applications",
+            "link":"https://saikiran1298.medium.com/integrating-stripe-payments-into-angular-and-nodejs-applications-10f40dcc21f5"
+        },
+        {
+            "name":"Uploading an Image using Multer in Nodejs and Angular Project",
+            "link":"https://saikiran1298.medium.com/uploading-an-image-using-multer-in-nodejs-and-angular-project-4d32b60e602e"
+        },
+        {
+            "name":"How to host Angular applications using Google Firebase?",
+            "link":"https://saikiran1298.medium.com/how-to-host-angular-applications-using-google-firebase-7f1408a5ab0"
+        },
+        {
+            "name":"How to host an Angular App to Github Pages?",
+            "link":"https://saikiran1298.medium.com/how-to-host-an-angular-app-to-github-pages-ef1900f88aa2"
+        }
+    ],
+    "certifications":[
+        {
+            "name":"Front-End Javascript Frameworks: Angular",
+            "organization":"Coursera",
+            "link":"https://coursera.org/share/1e08ae058df145e9e0f0384c7e052b75"
+        },
+        {
+            "name":"Front-End Web UI Frameworks and Tools: Bootstrap 4",
+            "organization":"Coursera",
+            "link":"https://www.coursera.org/account/accomplishments/verify/YBDPLXMNFWEA"
+        },
+        {
+            "name":"CSS Essentionals Training",
+            "organization":"LinkedIn",
+            "link":"https://www.linkedin.com/learning/css-essential-training-3"
+        },
+        {
+            "name":"Server-Side Development with NodeJs, Express, MongoDB",
+            "organization":"Coursera",
+            "link":"https://coursera.org/share/ca7d0cf2d9f03876900e401165982c53"
+        },
+        {
+            "name":"Agile with Atlassian Jira",
+            "organization":"Coursera",
+            "link":"https://coursera.org/share/ca7cd38dae3d8835ebd17cf100c9ba94"
+        }
+    ]   
+}

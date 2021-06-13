@@ -1,0 +1,17 @@
+<div class="container">
+    <h1> Blogs </h1>
+    <div class="blogs">
+        <mat-card *ngFor="let blog of blogs">
+            <a href="{{blog.link}}">{{blog.name}}</a>
+        </mat-card>
+    </div>
+</div>
+
+<div class="container">
+    <h1> Certifications </h1>
+    <div class="certifications">
+        <mat-card *ngFor="let certificate of certifications">
+            <a href="{{certificate.link}}">{{certificate.name}}</a>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<nav class="nav">
+    <div class="profile">
+        <img src="/assets/images/profile-image.JPG">
+        <h3> Sai Kiran Pocham </h3>
+        <!-- <div>
+            <span id="number"> +1 (917)-892-1667 </span>
+            <span> saikiran12698@gmail.com </span>
+        </div> -->
+    </div>
+
+    <ul class="nav-list">
+        <li><a (click)="changeSection('profile')" [class.active]="currentSection=='profile'" >Welcome</a></li>
+        <li><a (click)="changeSection('technologies')" [class.active]="currentSection=='technologies'">Technologies</a></li>
+        <li><a (click)="changeSection('blogs')" [class.active]="currentSection=='blogs'">Blogs & Certifications</a></li>
+        <li><a (click)="changeSection('projects')" [class.active]="currentSection=='projects'">Projects</a></li>
+        <li><a (click)="changeSection('education')" [class.active]="currentSection=='education'">Education</a></li>
+        <li><a (click)="changeSection('contact')" [class.active]="currentSection=='contact'">Get In Touch</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,36 @@
+.container{
+    margin: 0 5em;
+}
+
+h1{
+    font-size: 50px;
+    color: #424B54;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+}
+
+.school{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.school div{
+    padding: 1em 0;
+}
+
+.school div h2{
+    font-size: large;
+}
+
+.courses{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course{
+    background-color: blanchedalmond;
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 10px;
+    cursor:pointer;
+}

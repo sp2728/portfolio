@@ -1,0 +1,26 @@
+.container{
+    margin: 0 5em;
+    max-height: 100%;
+}
+
+h1{
+    font-size: 50px;
+    color: #424B54;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.img{
+    background-size: contain;
+}

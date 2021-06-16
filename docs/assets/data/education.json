@@ -1,0 +1,22 @@
+{
+    "education":[
+        {
+            "name": "New Jersey Institute of Technology",
+            "startDate":"Jan 2020",
+            "endDate":"Dec 2021",
+            "degree":"Bachelors",
+            "major":"Business Information Systems",
+            "specialization":"",
+            "keyCourses":["System Analysis & Design", "Web System Development", "User Experience Design", "Enterprise Database Management", "Enterprise Architecture & Integration"]
+        },
+        {
+            "name": "Manipal Institute of Technology",
+            "startDate":"Aug 2015",
+            "endDate":"May 2019",
+            "degree":"Masters",
+            "major":"Information Technology",
+            "specialization":"Data Analytics",
+            "keyCourses":["Cloud Computing", "Software Engineering", "Object Oriented Programming", "Design & Analysis of Algorithms", "Data Structures"]
+        }
+    ]
+}

@@ -628,6 +628,7 @@ let BlogsComponent = class BlogsComponent {
         this.getBlogsData();
     }
     getBlogsData() {
+        console.log(window.location.pathname);
         this.http.get('assets/data/blogs.json')
             .subscribe((res) => {
             this.blogs = res.blogs;

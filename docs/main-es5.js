@@ -1242,6 +1242,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getBlogsData() {
           var _this3 = this;
 
+          console.log(window.location.pathname);
           this.http.get('assets/data/blogs.json').subscribe(function (res) {
             _this3.blogs = res.blogs;
             _this3.certifications = res.certifications;

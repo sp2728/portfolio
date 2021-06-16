@@ -29,6 +29,7 @@ export class BlogsComponent implements OnInit {
   }
 
   getBlogsData(){
+    console.log(window.location.pathname)
     this.http.get('assets/data/blogs.json')
     .subscribe((res:any)=>{
       this.blogs = res.blogs;

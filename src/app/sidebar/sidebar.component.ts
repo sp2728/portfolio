@@ -23,7 +23,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.activeSection.subscribe(res=>{
-      console.log(res);
       this.currentSection = res;
     })
 

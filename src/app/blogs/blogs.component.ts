@@ -29,7 +29,7 @@ export class BlogsComponent implements OnInit {
   }
 
   getBlogsData(){
-    this.http.get('../assets/data/blogs.json')
+    this.http.get('assets/data/blogs.json')
     .subscribe((res:any)=>{
       this.blogs = res.blogs;
       this.certifications = res.certifications;

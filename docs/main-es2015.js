@@ -628,7 +628,7 @@ let BlogsComponent = class BlogsComponent {
         this.getBlogsData();
     }
     getBlogsData() {
-        this.http.get('../assets/data/blogs.json')
+        this.http.get('assets/data/blogs.json')
             .subscribe((res) => {
             this.blogs = res.blogs;
             this.certifications = res.certifications;
@@ -976,7 +976,6 @@ let SidebarComponent = class SidebarComponent {
     }
     ngOnInit() {
         this.activeSection.subscribe(res => {
-            console.log(res);
             this.currentSection = res;
         });
         this.getSidebarStatus();

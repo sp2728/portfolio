@@ -3,31 +3,31 @@
         {
             "name":"Health Intel",
             "description":"",
-            "logo":"/assets/images/healthintel.svg",
+            "logo":"assets/images/healthintel.svg",
             "link":"http://healthIntel.herokuapp.com"
         },
         {
             "name":"Volunteer Realm",
             "description":"",
-            "logo":"/assets/images/volunteerrealm.jpg",
+            "logo":"assets/images/volunteerrealm.jpg",
             "link":"http://volunteerrealm.herokuapp.com"
         },
         {
             "name":"ScholarVerse",
-            "logo":"/assets/images/sholarverse.png",
+            "logo":"assets/images/sholarverse.png",
             "description":"",
             "link":""
         },
         {
             "name":"",
             "description":"",
-            "logo":"/assets/images/eatcube.png",
+            "logo":"assets/images/eatcube.png",
             "link":"https://www.eatcube.com/"
         },
         {
             "name":"",
             "description":"",
-            "logo":"/assets/images/referralvoodoo.png",
+            "logo":"assets/images/referralvoodoo.png",
             "link":"https://referralvoodoo.com/"
         }
     ]

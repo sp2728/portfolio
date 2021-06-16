@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HelperService } from './services/helper.service';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -42,7 +43,8 @@ export class AppComponent implements OnInit {
   sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact']
   
   constructor(
-    private helperService:HelperService
+    private helperService:HelperService,
+    private _snackBar:MatSnackBar
     ) {
   }
 
@@ -50,6 +52,10 @@ export class AppComponent implements OnInit {
     this.getSidebarStatus();
     document.getElementById('main').addEventListener('scroll', () => {
       this.keepTrack();
+    })
+    
+    this._snackBar.open('Website is under development','OK', {
+      verticalPosition: 'top'
     })
   }
 

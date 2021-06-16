@@ -197,7 +197,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n    <h1> Technological Experience </h1>\n    <div class=\"flex\">\n        <div class=\"skills\" *ngFor=\"let skill of skills\">\n            <img [src]=\"skill.logo\">\n            <!-- <h4>{{skill.name}}</h4> -->\n        </div>\n    </div>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"container\">\n    <h1> Technological Experience </h1>\n    <div class=\"flex\">\n        <div class=\"skills\" *ngFor=\"let skill of skills\">\n            <img src=\"{{skill.logo}}\">\n            <!-- <h4>{{skill.name}}</h4> -->\n        </div>\n    </div>\n</div>";
     /***/
   },
 
@@ -925,12 +925,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/animations */
     "./node_modules/@angular/animations/fesm2015/animations.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var AppComponent = /*#__PURE__*/function () {
-      function AppComponent(helperService) {
+      function AppComponent(helperService, _snackBar) {
         _classCallCheck(this, AppComponent);
 
         this.helperService = helperService;
+        this._snackBar = _snackBar;
         this.title = 'Portfolio';
         this.sidebarVisible = true;
         this.currentSection = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]('profile');
@@ -945,6 +952,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.getSidebarStatus();
           document.getElementById('main').addEventListener('scroll', function () {
             _this.keepTrack();
+          });
+
+          this._snackBar.open('Website is under development', 'OK', {
+            verticalPosition: 'top'
           });
         }
       }, {
@@ -1014,6 +1025,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AppComponent.ctorParameters = function () {
       return [{
         type: _services_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
       }];
     };
 
@@ -1971,7 +1984,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getSkills() {
           var _this9 = this;
 
-          this.http.get('assets/data/blogs.json').subscribe(function (res) {
+          this.http.get('assets/data/technologies.json').subscribe(function (res) {
             _this9.skills = res.skills;
           });
         }

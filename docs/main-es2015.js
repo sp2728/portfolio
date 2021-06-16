@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n    <h1> Technological Experience </h1>\n    <div class=\"flex\">\n        <div class=\"skills\" *ngFor=\"let skill of skills\">\n            <img [src]=\"skill.logo\">\n            <!-- <h4>{{skill.name}}</h4> -->\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n    <h1> Technological Experience </h1>\n    <div class=\"flex\">\n        <div class=\"skills\" *ngFor=\"let skill of skills\">\n            <img src=\"{{skill.logo}}\">\n            <!-- <h4>{{skill.name}}</h4> -->\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -439,14 +439,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var _services_helper_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/helper.service */ "./src/app/services/helper.service.ts");
 /* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm2015/animations.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
 
 
 let AppComponent = class AppComponent {
-    constructor(helperService) {
+    constructor(helperService, _snackBar) {
         this.helperService = helperService;
+        this._snackBar = _snackBar;
         this.title = 'Portfolio';
         this.sidebarVisible = true;
         this.currentSection = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]('profile');
@@ -456,6 +459,9 @@ let AppComponent = class AppComponent {
         this.getSidebarStatus();
         document.getElementById('main').addEventListener('scroll', () => {
             this.keepTrack();
+        });
+        this._snackBar.open('Website is under development', 'OK', {
+            verticalPosition: 'top'
         });
     }
     getSidebarStatus() {
@@ -488,7 +494,8 @@ let AppComponent = class AppComponent {
     }
 };
 AppComponent.ctorParameters = () => [
-    { type: _services_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"] }
+    { type: _services_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1052,7 +1059,7 @@ let TechnologiesComponent = class TechnologiesComponent {
         this.getSkills();
     }
     getSkills() {
-        this.http.get('assets/data/blogs.json')
+        this.http.get('assets/data/technologies.json')
             .subscribe((res) => {
             this.skills = res.skills;
         });

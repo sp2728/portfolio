@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit {
   }
 
   getProfile(){
-    this.http.get('/assets/data/profile.json')
+    this.http.get('../assets/data/profile.json')
     .subscribe((res:any)=>{
       this.profile = res.profile;
     })

@@ -1,11 +1,11 @@
 <div class="container">
   <h1> Projects </h1>
   <div class="projects">
-      <mat-card *ngFor="let project of projects">
-          <a href="{{project.link}}">
+      <div *ngFor="let project of projects">
+          <a href="{{project.link}}" target="_blank">
             <img src="{{project.logo}}">
-            {{project.name}}
+            <span>{{project.name}}</span> 
           </a>
-      </mat-card>
+        </div>
   </div>
 </div>

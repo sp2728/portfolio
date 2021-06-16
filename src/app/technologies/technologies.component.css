@@ -15,12 +15,8 @@ h1{
     flex-wrap: wrap;
 }
 
-.skills{
-    width: 100px;
-    height: 100px;
-    margin: 20px;
-}
-
-.img{
+img{
+    width: 150px;
+    max-width: 150px;
     background-size: contain;
 }

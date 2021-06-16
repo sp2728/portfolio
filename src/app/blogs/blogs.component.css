@@ -5,11 +5,6 @@ h1{
     letter-spacing: 0.1em;
 }
 
-.container div{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 mat-card{
     margin: 1em;
     width: 200px;
@@ -20,4 +15,12 @@ a{
     padding: 5px;
     text-decoration: none;
 }
+
+.container div{
+    display: flex;
+
+    flex-wrap: wrap;
+
+}
+
 

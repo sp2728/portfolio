@@ -22,6 +22,15 @@ nav{
     line-height: 3em;
 }
 
+.location{
+    color: #503D42;
+    background-color: blanchedalmond;
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
 .nav ul{
     list-style: none;
     display: flex;

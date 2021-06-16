@@ -10,10 +10,16 @@ h1{
     flex-wrap: wrap;
 }
 
-mat-card{
-    height: 5em;
-    margin: 2em;
-    text-align: center;
-    background: transparent;
-    box-shadow: none;
+a{
+    margin: 1.5em;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: 10px black;
+}
+
+img{
+    display: block;
+    max-height:5em;
+    max-width: 5em;
+    object-fit: contain;
 }

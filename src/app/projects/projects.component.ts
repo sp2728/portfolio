@@ -1,11 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
-export interface Project{
-  name:string;
-  description:string;
-  link:string;
-}
+import { Project } from '../models/data.model';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-projects',
@@ -15,16 +11,18 @@ export interface Project{
 export class ProjectsComponent implements OnInit {
 
   projects: Project[];
-  constructor(private http:HttpClient) { }
+  constructor(private http:DataService) { }
 
   ngOnInit() {
     this.getProjects();
   }
 
   getProjects(){
-    this.http.get('assets/data/projects.json')
-    .subscribe((res:any)=>{
-      this.projects = res.projects;
+    this.http.getProjects()
+    .then(response=>{
+      if(response.success){
+        this.projects = response.data;
+      }
     })
   }
 

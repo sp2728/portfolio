@@ -1,14 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
-export interface Profile{
-  name:string;
-  email:string;
-  phone:string;
-  linkedIn:string;
-  mediumUrl:string;
-  location:string;
-}
+import { Profile } from '../models/data.model';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-profile',
@@ -20,7 +13,7 @@ export class ProfileComponent implements OnInit {
   profile:Profile;
 
   constructor(
-    private http:HttpClient
+    private http:DataService
   ) { 
     this.getProfile();
   }
@@ -29,9 +22,11 @@ export class ProfileComponent implements OnInit {
   }
 
   getProfile(){
-    this.http.get('assets/data/profile.json')
-    .subscribe((res:any)=>{
-      this.profile = res.profile;
+    this.http.getProfile()
+    .then(response=>{
+      if(response.success){
+        this.profile = response.data;
+      }
     })
   }
 

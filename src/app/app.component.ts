@@ -55,7 +55,8 @@ export class AppComponent implements OnInit {
     })
     
     this._snackBar.open('Website is under development','OK', {
-      verticalPosition: 'top'
+      verticalPosition: 'top',
+      panelClass: ['red-snackbar'],
     })
   }
 

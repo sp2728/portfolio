@@ -1,11 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Skill } from '../models/data.model';
+import { DataService } from '../services/data.service';
 
-export interface Skills{
-  name:string;
-  logo:string;
-  type:string;
-}
 
 @Component({
   selector: 'app-technologies',
@@ -14,9 +11,9 @@ export interface Skills{
 })
 export class TechnologiesComponent implements OnInit {
 
-  skills:Skills;
+  skills:Skill[];
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:DataService) { }
 
   ngOnInit() {
     this.getSkills();
@@ -24,9 +21,11 @@ export class TechnologiesComponent implements OnInit {
 
 
   getSkills(){
-    this.http.get('assets/data/technologies.json')
-    .subscribe((res:any)=>{
-      this.skills = res.skills;
+    this.http.getSkills()
+    .then(response=>{
+      if(response.success){
+        this.skills = response.data;
+      }
     })
   }
 

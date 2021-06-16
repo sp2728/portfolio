@@ -1,12 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
-export interface Schools{
-  name:string;
-  startDate:string;
-  endDate:string;
-  keyCourses:string[];
-}
+import { School } from '../models/data.model';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-education',
@@ -15,18 +9,20 @@ export interface Schools{
 })
 export class EducationComponent implements OnInit {
 
-  schools:Schools;
+  schools:School[];
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:DataService) { }
 
   ngOnInit() {
     this.getEducationDetails();
   }
 
   getEducationDetails(){
-    this.http.get('assets/data/education.json')
-    .subscribe((res:any)=>{
-      this.schools = res.education;
+    this.http.getEducationDetails()
+    .then(response=>{
+      if(response.success){
+        this.schools = response.data;
+      }
     })
   }
 

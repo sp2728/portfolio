@@ -22,8 +22,9 @@ export class TechnologiesComponent implements OnInit {
     this.getSkills();
   }
 
+
   getSkills(){
-    this.http.get('/assets/data/technologies.json')
+    this.http.get('../../assets/data/blogs.json')
     .subscribe((res:any)=>{
       this.skills = res.skills;
     })

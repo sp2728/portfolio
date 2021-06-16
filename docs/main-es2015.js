@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"nav\">\n    <div class=\"profile\">\n        <img src=\"/assets/images/profile-image.JPG\">\n        <h3> Sai Kiran Pocham </h3>\n\n        <span class=\"location\"> New Jersey, USA </span>\n        <!-- <div>\n            <span id=\"number\"> +1 (917)-892-1667 </span>\n            <span> saikiran12698@gmail.com </span>\n        </div> -->\n    </div>\n\n    <ul class=\"nav-list\">\n        <li><a (click)=\"changeSection('profile')\" [class.active]=\"currentSection=='profile'\" >Welcome</a></li>\n        <li><a (click)=\"changeSection('technologies')\" [class.active]=\"currentSection=='technologies'\">Technologies</a></li>\n        <li><a (click)=\"changeSection('blogs')\" [class.active]=\"currentSection=='blogs'\">Blogs & Certifications</a></li>\n        <li><a (click)=\"changeSection('projects')\" [class.active]=\"currentSection=='projects'\">Projects</a></li>\n        <li><a (click)=\"changeSection('education')\" [class.active]=\"currentSection=='education'\">Education</a></li>\n        <li><a (click)=\"changeSection('contact')\" [class.active]=\"currentSection=='contact'\">Get In Touch</a></li>\n    </ul>\n</nav>");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"nav\">\n    <div class=\"profile\">\n        <img src=\"../../assets/images/profile-image.JPG\">\n        <h3> Sai Kiran Pocham </h3>\n\n        <span class=\"location\"> New Jersey, USA </span>\n        <!-- <div>\n            <span id=\"number\"> +1 (917)-892-1667 </span>\n            <span> saikiran12698@gmail.com </span>\n        </div> -->\n    </div>\n\n    <ul class=\"nav-list\">\n        <li><a (click)=\"changeSection('profile')\" [class.active]=\"currentSection=='profile'\" >Welcome</a></li>\n        <li><a (click)=\"changeSection('technologies')\" [class.active]=\"currentSection=='technologies'\">Technologies</a></li>\n        <li><a (click)=\"changeSection('blogs')\" [class.active]=\"currentSection=='blogs'\">Blogs & Certifications</a></li>\n        <li><a (click)=\"changeSection('projects')\" [class.active]=\"currentSection=='projects'\">Projects</a></li>\n        <li><a (click)=\"changeSection('education')\" [class.active]=\"currentSection=='education'\">Education</a></li>\n        <li><a (click)=\"changeSection('contact')\" [class.active]=\"currentSection=='contact'\">Get In Touch</a></li>\n    </ul>\n</nav>");
 
 /***/ }),
 
@@ -1052,7 +1052,7 @@ let TechnologiesComponent = class TechnologiesComponent {
         this.getSkills();
     }
     getSkills() {
-        this.http.get('/assets/data/technologies.json')
+        this.http.get('../../assets/data/blogs.json')
             .subscribe((res) => {
             this.skills = res.skills;
         });

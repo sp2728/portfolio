@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjects(){
-    this.http.get('../assets/data/projects.json')
+    this.http.get('assets/data/projects.json')
     .subscribe((res:any)=>{
       this.projects = res.projects;
     })

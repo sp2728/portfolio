@@ -24,7 +24,7 @@ export class EducationComponent implements OnInit {
   }
 
   getEducationDetails(){
-    this.http.get('/assets/data/education.json')
+    this.http.get('assets/data/education.json')
     .subscribe((res:any)=>{
       this.schools = res.education;
     })

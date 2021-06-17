@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
 
   title = 'Portfolio';
 
-  sidebarVisible:any =true;
+  sidebarVisible:any =false;
 
   currentSection: BehaviorSubject<String> = new BehaviorSubject('profile');
 

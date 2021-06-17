@@ -1,9 +1,8 @@
 <div class="container">
-    <h1> Technological Experience </h1>
+    <h1 class="section-heading"> Technological Experience </h1>
     <div class="flex">
-        <div class="skills" *ngFor="let skill of skills">
-            <img src="{{skill.logo}}">
-            <!-- <h4>{{skill.name}}</h4> -->
-        </div>
+        <mat-card class="skills" *ngFor="let skill of skills">
+            <img src="{{skill.logo}}" matTooltip="{{skill.name}}">
+        </mat-card>
     </div>
 </div>

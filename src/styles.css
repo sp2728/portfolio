@@ -11,6 +11,7 @@
 :root{
     --main-bg-red:#503D42;
     --main-bg-white:#F5FBEF;
+    --light-bg-red: rgba(80, 61, 66, 0.4)
 }
 
 html, body { height: 100%; }
@@ -24,4 +25,11 @@ body {
 
 h1{
     font-family: 'Caveat', cursive;
+}
+
+.section-heading{
+    font-size: 50px;
+    color: var(--main-bg-red);
+    line-height: 2em;
+    letter-spacing: 0.1em;
 }

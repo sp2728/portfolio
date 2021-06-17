@@ -1,19 +1,17 @@
-h1{
-    font-size: 50px;
-    color: #424B54;
-    line-height: 2em;
-    letter-spacing: 0.1em;
-}
+@import url('../../styles.css');
 
 mat-card{
     margin: 1em;
     width: 200px;
     height: 75px;
+    background:rgb(255, 255, 255, 0.8);
+    color: black;
 }
 
 a{
     padding: 5px;
     text-decoration: none;
+    color: tomato;
 }
 
 .container div{

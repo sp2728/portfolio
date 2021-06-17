@@ -1,13 +1,11 @@
-h1{
-    font-size: 50px;
-    color: #424B54;
-    line-height: 2em;
-    letter-spacing: 0.1em;
-}
-
+@import url('../../styles.css');
 .field{
     display: block;
     width: auto;
     margin: 10px 0;
 }
 
+button{
+    background-color: var(--main-bg-red);
+    color: var(--main-bg-white);
+}

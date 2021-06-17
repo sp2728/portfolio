@@ -8,11 +8,13 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatTooltipModule } from '@angular/material';
 import { BlogsComponent } from './blogs/blogs.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { ContactComponent } from './contact/contact.component';
     EducationComponent,
     ProjectsComponent,
     ContactComponent,
+    NavbarComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { ContactComponent } from './contact/contact.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

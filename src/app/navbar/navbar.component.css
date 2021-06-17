@@ -1,0 +1,26 @@
+@import url('../../styles.css');
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    background-color: var(--light-bg-red);
+    width: 100%;
+    justify-content: space-around;
+    padding: 5px 40px;
+    border-radius: 20px;
+}
+
+.nav-list li{
+    margin:15px
+}
+
+.nav-list li a{
+    font-weight: bold;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+a:hover, .active {
+    color: var(--main-bg-white);
+}

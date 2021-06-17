@@ -1,10 +1,10 @@
+<app-header class="header"></app-header>
 <div class="flex">
-
-  <div class="sidebar" *ngIf="sidebarVisible" @inOutAnimation>
+  <!-- <div class="sidebar" *ngIf="sidebarVisible" @inOutAnimation>
     <app-sidebar [activeSection]="currentSection" (sectionEvent)="changeSection($event)">
     </app-sidebar>
     <button mat-button class="fa fa-times" (click)="closeSideBar()"> </button>
-  </div>
+  </div> -->
   <div class="main-content" id="main">
       <app-profile id="profile" class="wrapper"></app-profile>
 
@@ -19,7 +19,9 @@
       <app-contact id="contact" class="wrapper"></app-contact>
   </div>
 </div>
-<button mat-button class="fa fa-bars" *ngIf="!sidebarVisible" (click)="openSidebar()"> </button>
+
+<app-navbar class="navbar" [activeSection]="currentSection" (sectionEvent)="changeSection($event)"></app-navbar>
+<!-- <button mat-button class="fa fa-bars" *ngIf="!sidebarVisible" (click)="openSidebar()"> </button> -->
 
 <div class="socialMedia">
   <div class="follow">Follow Me</div>

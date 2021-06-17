@@ -1,5 +1,11 @@
 @import url('../styles.css');
 
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+}
+
 .flex{
     display: flex;
     align-items: stretch;
@@ -12,6 +18,14 @@
     overflow-y: scroll;
     font-size: 0.65em;
     background: var(--main-bg-red);
+}
+
+.navbar{
+    position: fixed;
+    width: 40%;
+    z-index: 101;
+    bottom:5%;
+    right: 30%;
 }
 
 .main-content{
@@ -38,7 +52,9 @@ background-color: #FFEEDD;
 }
 
 #blogs{
-    background-color: #B8B8FF;
+    background-image: url('../assets/images/blogs.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 #projects{
@@ -48,7 +64,7 @@ background-color: #FFEEDD;
 #education{
     height: 100%;
     background-image: url('../assets/images/pencil.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 

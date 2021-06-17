@@ -1,18 +1,7 @@
-h1{
-    font-size: 50px;
-    color: #424B54;
-    line-height: 2em;
-    letter-spacing: 0.1em;
-}
-
-.container{
-  
-}
-
 .intro{
-    width: 100%;
+    width: 50%;
     font-size: 24px;
-    animation: typing 5s steps(60), blink 1s step-end infinite alternate;
+    animation: typing 3s steps(25), blink 1s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;

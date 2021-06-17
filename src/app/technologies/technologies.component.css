@@ -3,20 +3,22 @@
     max-height: 100%;
 }
 
-h1{
-    font-size: 50px;
-    color: #424B54;
-    line-height: 2em;
-    letter-spacing: 0.1em;
-}
-
 .flex{
     display: flex;
     flex-wrap: wrap;
 }
 
+.skills{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
 img{
-    width: 150px;
-    max-width: 150px;
-    background-size: contain;
+    max-width:90%;
+    max-height:90%;
 }

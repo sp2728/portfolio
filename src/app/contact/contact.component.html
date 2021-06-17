@@ -1,5 +1,5 @@
 <div class="container">
-    <h1> Get In Touch </h1>
+    <h1 class="section-heading"> Get In Touch </h1>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
         <mat-form-field class="field">
@@ -20,6 +20,6 @@
             <mat-error *ngIf="contactForm.get('message').invalid"> {{getErrorMessage(contactForm.get('message'))}} </mat-error>
         </mat-form-field>
 
-        <button mat-raised-button type="submit" [disabled]="contactForm.invalid"> Submit </button>
+        <button mat-raised-button type="submit" [disabled]="contactForm.invalid"> {{'Submit' | uppercase}} </button>
     </form>
 </div>

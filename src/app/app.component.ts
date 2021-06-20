@@ -3,72 +3,35 @@ import { BehaviorSubject } from 'rxjs';
 import { HelperService } from './services/helper.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
+import { SECTIONS } from './constant';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  animations: [
-    trigger(
-      'inOutAnimation', 
-      [
-        transition(
-          ':enter', 
-          [
-            style({ width: 0}),
-            animate('0.5s ease-out', 
-                    style({ width: 500}))
-          ]
-        ),
-        transition(
-          ':leave', 
-          [
-            style({ width: 500 }),
-            animate('0.5s ease-in', 
-                    style({ width: 0}))
-          ]
-        )
-      ]
-    )
-  ],
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
 
-  title = 'Portfolio';
-
-  sidebarVisible:any =false;
-
-  currentSection: BehaviorSubject<String> = new BehaviorSubject('profile');
+  activeSection:string;
 
   sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact']
-  
+
   constructor(
-    private helperService:HelperService,
-    private _snackBar:MatSnackBar
+    private _snackBar:MatSnackBar,
+    private helperService:HelperService
     ) {
   }
 
   ngOnInit() {
-    this.getSidebarStatus();
-    document.getElementById('main').addEventListener('scroll', () => {
-      this.keepTrack();
-    })
-    
     this._snackBar.open('Website is under development','OK', {
       verticalPosition: 'top',
-      panelClass: ['red-snackbar'],
     })
   }
 
-  getSidebarStatus(){
-    this.helperService.getSidebarStatus().subscribe(res=>{
-      this.sidebarVisible = res;
+  getCurrentSection(){
+    this.helperService.getCurrentSection().subscribe((res:string)=>{
+      this.activeSection = res;
     })
-  }
-
-  changeSection(section: string) {
-    let element = document.getElementById(section);
-    element.scrollIntoView({behavior:'smooth', block: "start", inline: "nearest"})
   }
 
   keepTrack() {
@@ -80,18 +43,21 @@ export class AppComponent implements OnInit {
       if (element != null) {
         const rect = element.getBoundingClientRect();
         if (rect.top >= 0 && rect.top < viewHeight /3 ) {
-          this.currentSection.next(section);
+          if(this.activeSection != section){
+            this.helperService.setCurrentSection(section);
+          }
         }
       }
     }
   }
 
-  openSidebar(){
-    this.helperService.setSidebarStatus(true);
+  changeSection(section: string) {
+    let element = document.getElementById(section);
+    element.scrollIntoView({behavior:'smooth', block: "start", inline: "nearest"});
+    this.helperService.setCurrentSection(section);
   }
 
-  closeSideBar(){
-    this.helperService.setSidebarStatus(false);
-  }
+
+
   
 }

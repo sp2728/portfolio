@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { HelperService } from '../services/helper.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,16 +9,20 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input('activeSection') activeSection: BehaviorSubject<any>;
-
   currentSection:string;
   
   @Output() sectionEvent = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(
+    private helperService:HelperService
+  ) { }
 
   ngOnInit() {
-    this.activeSection.subscribe(res=>{
+    this.getCurrentSection();
+  }
+
+  getCurrentSection(){
+    this.helperService.getCurrentSection().subscribe((res:string)=>{
       this.currentSection = res;
     })
   }
@@ -25,6 +30,7 @@ export class NavbarComponent implements OnInit {
   changeSection(section:string){
     this.sectionEvent.emit(section);
     this.currentSection = section;
+    this.helperService.setCurrentSection(this.currentSection);
   }
 
 }

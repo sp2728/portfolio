@@ -1,10 +1,16 @@
+<h1 class="section-heading"> Profile (Full Stack Developer && Frontend Developer) </h1>
 <div class="container">
-  <h1 class="section-heading"> Profile </h1>
-  <p class="intro" *ngIf="profile">
-    Hi! My name is {{profile.name}}.
-  </p>
-  <p >
-    I'm passionate full stack developer having an experience in building web
-    applications with Angular, Typescript, NodeJs, Express and many other libraries and frameworks.
-  </p>
+  <div>
+    <img src="{{profile.image}}"/>
+  </div>
+  <div>
+    <p class="intro" *ngIf="profile">
+      Hi! My name is {{profile.name}}.
+    </p>
+    <p class="description">
+      I'm passionate full stack developer having an experience in building web
+      applications with Angular, Typescript, NodeJs, Express and many other libraries and frameworks.
+    </p>
+  </div>
+
 </div>

@@ -16,6 +16,10 @@ nav{
     text-transform: none;
 }
 
+.name:hover{
+    color: var(--main-bg-red);
+}
+
 .contact{
     position: absolute;
     right: 20px;

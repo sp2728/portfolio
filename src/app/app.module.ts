@@ -15,6 +15,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
+import { SlideFromLeftDirective } from './directives/slide-from-left.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HeaderComponent } from './header/header.component';
     ContactComponent,
     NavbarComponent,
     HeaderComponent,
+    SlideFromLeftDirective,
   ],
   imports: [
     BrowserModule,

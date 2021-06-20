@@ -30,6 +30,7 @@ export class ContactComponent implements OnInit {
   createForm(){
     this.contactForm = this.fb.group({
       name:['', [Validators.required]],
+      subject:['', [Validators.required]],
       email:['', [Validators.required, Validators.email]],
       message:['',[Validators.required]]
     })
@@ -47,10 +48,15 @@ export class ContactComponent implements OnInit {
   onSubmit(){
     if(this.contactForm.valid){
       this.messageInfo = this.contactForm.value;
+
+      this.contactForm.reset();
+
       this._snackBar.open('Message Submitted', 'Close', {
         duration:2000
       })
     }
   }
+
+
 
 }

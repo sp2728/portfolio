@@ -9,6 +9,7 @@ export class Profile{
     email:string;
     phone:string;
     linkedIn:string;
+    image:string;
     mediumUrl:string;
     location:string;
 
@@ -16,6 +17,7 @@ export class Profile{
         this.name = data.name? data.name:null;
         this.email = data.email? data.email:null;
         this.phone = data.phone? data.phone:null;
+        this.image = data.image? data.image:null;
         this.linkedIn = data.linkedIn? data.linkedIn:null;
         this.mediumUrl = data.mediumUrl? data.mediumUrl:null;
         this.location = data.location? data.location:null;

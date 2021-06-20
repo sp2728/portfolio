@@ -21,6 +21,7 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--main-bg-white);
 }
 
 h1{
@@ -32,4 +33,8 @@ h1{
     color: var(--main-bg-red);
     line-height: 2em;
     letter-spacing: 0.1em;
+}
+
+.cotainer-padding{
+    padding: 20px;
 }

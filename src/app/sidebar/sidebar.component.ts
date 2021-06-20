@@ -24,24 +24,16 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.activeSection.subscribe(res=>{
       this.currentSection = res;
-    })
-
-    this.getSidebarStatus();
-  }
-
-  getSidebarStatus(){
-    this.helperService.getSidebarStatus().subscribe(res=>{
-      this.sidebarVisible = res;
+      this.helperService.setCurrentSection(this.currentSection);
     })
   }
+
 
   changeSection(section:string){
     this.sectionEvent.emit(section);
     this.currentSection = section;
-  }
-
-  closeSideBar(){
-    this.helperService.setSidebarStatus(false);
+    console.log(section)
+    this.helperService.setCurrentSection(this.currentSection);
   }
 
 }

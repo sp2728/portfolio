@@ -97,7 +97,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"flex\">\n\n<div class=\"info\">\n    Helloasfpainsfasasfaga\n</div>\n<div class=\"container\">\n    <h1 class=\"section-heading\"> Get In Touch </h1>\n    <form [formGroup]=\"contactForm\" (ngSubmit)=\"onSubmit()\">\n\n        <mat-form-field class=\"field\">\n            <mat-label>Name</mat-label>\n            <input matInput placeholder=\"Name\" formControlName=\"name\" required>\n            <mat-error *ngIf=\"contactForm.get('name').invalid\"> {{getErrorMessage(contactForm.get('name'))}} </mat-error>\n        </mat-form-field>\n\n        <mat-form-field class=\"field\">\n            <mat-label>Subject</mat-label>\n            <input matInput placeholder=\"Subject\" formControlName=\"subject\" required>\n            <mat-error *ngIf=\"contactForm.get('subject').invalid\"> {{getErrorMessage(contactForm.get('subject'))}} </mat-error>\n        </mat-form-field>\n\n        <mat-form-field class=\"field\">\n            <mat-label>Email</mat-label>\n            <input matInput placeholder=\"Email\" formControlName=\"email\" required>\n            <mat-error *ngIf=\"contactForm.get('email').invalid\"> {{getErrorMessage(contactForm.get('email'))}} </mat-error>\n        </mat-form-field>\n\n        <mat-form-field class=\"field\">\n            <mat-label>Message</mat-label>\n            <textarea matInput placeholder=\"Enter your message\" rows=5 formControlName=\"message\" required></textarea>\n            <mat-error *ngIf=\"contactForm.get('message').invalid\"> {{getErrorMessage(contactForm.get('message'))}} </mat-error>\n        </mat-form-field>\n\n        <button mat-raised-button type=\"submit\" [disabled]=\"contactForm.invalid\"> {{'Submit' | uppercase}} </button>\n    </form>\n</div>\n\n</div>";
+    __webpack_exports__["default"] = "<div class=\"flex\">\n    \n<div class=\"container\">\n    <h1 class=\"section-heading\"> Get In Touch </h1>\n    <form [formGroup]=\"contactForm\" (ngSubmit)=\"onSubmit()\">\n\n        <mat-form-field class=\"field\">\n            <mat-label>Name</mat-label>\n            <input matInput placeholder=\"Name\" formControlName=\"name\" required>\n            <mat-error *ngIf=\"contactForm.get('name').invalid\"> {{getErrorMessage(contactForm.get('name'))}} </mat-error>\n        </mat-form-field>\n\n        <mat-form-field class=\"field\">\n            <mat-label>Subject</mat-label>\n            <input matInput placeholder=\"Subject\" formControlName=\"subject\" required>\n            <mat-error *ngIf=\"contactForm.get('subject').invalid\"> {{getErrorMessage(contactForm.get('subject'))}} </mat-error>\n        </mat-form-field>\n\n        <mat-form-field class=\"field\">\n            <mat-label>Email</mat-label>\n            <input matInput placeholder=\"Email\" formControlName=\"email\" required>\n            <mat-error *ngIf=\"contactForm.get('email').invalid\"> {{getErrorMessage(contactForm.get('email'))}} </mat-error>\n        </mat-form-field>\n\n        <mat-form-field class=\"field\">\n            <mat-label>Message</mat-label>\n            <textarea matInput placeholder=\"Enter your message\" rows=5 formControlName=\"message\" required></textarea>\n            <mat-error *ngIf=\"contactForm.get('message').invalid\"> {{getErrorMessage(contactForm.get('message'))}} </mat-error>\n        </mat-form-field>\n\n        <button mat-raised-button type=\"submit\" [disabled]=\"contactForm.invalid\"> {{'Submit' | uppercase}} </button>\n    </form>\n</div>\n\n</div>";
     /***/
   },
 
@@ -197,7 +197,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\n  <h1 class=\"section-heading\"> Projects </h1>\n  <div class=\"projects\">\n      <div *ngFor=\"let project of projects\">\n          <a href=\"{{project.link}}\" target=\"_blank\">\n            <img src=\"{{project.logo}}\">\n            <span>{{project.name}}</span> \n          </a>\n        </div>\n  </div>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"container\">\n  <h1 class=\"section-heading\"> Projects </h1>\n  <div class=\"flex\">\n    <mat-card *ngFor=\"let project of projects\" [@slideDisplay]=\"isSlide\">\n      <mat-card-header>\n        <img src=\"{{project.logo}}\">\n      </mat-card-header>\n      <mat-card-content>\n        <h2>{{project.name}}</h2>\n        <div class=\"flex\">\n          <span class=\"tag\" *ngFor=\"let tag of project.tags\">{{tag}}</span>\n        </div>\n      </mat-card-content>\n      <mat-card-actions>\n        <a mat-button href=\"{{project.link}}\" target=\"_blank\"> View Project </a>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n</div>";
     /***/
   },
 
@@ -1873,6 +1873,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.description = data.description ? data.description : null;
           this.logo = data.logo ? data.logo : null;
           this.link = data.link ? data.link : null;
+          this.tags = data.tags ? data.tags : null;
           return this;
         }
       }]);
@@ -2135,7 +2136,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".container div{\n    display: flex;\n    flex-wrap: wrap;\n}\n\na{\n    margin: 1.5em;\n    text-decoration: none;\n    align-items: center;\n    box-shadow: 10px black;\n}\n\nimg{\n    display: block;\n    max-height:5em;\n    max-width: 5em;\n    -o-object-fit: contain;\n       object-fit: contain;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvamVjdHMvcHJvamVjdHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGFBQWE7SUFDYixlQUFlO0FBQ25COztBQUVBO0lBQ0ksYUFBYTtJQUNiLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIsc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksY0FBYztJQUNkLGNBQWM7SUFDZCxjQUFjO0lBQ2Qsc0JBQW1CO09BQW5CLG1CQUFtQjtBQUN2QiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIGRpdntcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbn1cblxuYXtcbiAgICBtYXJnaW46IDEuNWVtO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGJveC1zaGFkb3c6IDEwcHggYmxhY2s7XG59XG5cbmltZ3tcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBtYXgtaGVpZ2h0OjVlbTtcbiAgICBtYXgtd2lkdGg6IDVlbTtcbiAgICBvYmplY3QtZml0OiBjb250YWluO1xufSJdfQ== */";
+    __webpack_exports__["default"] = "ul{\n    list-style: none;\n}\n\n.flex{\n    display: flex;\n    flex-wrap: wrap;\n}\n\nmat-card{\n    position: relative;\n    margin: 20px;\n    width: 280px;\n    height: 300px;\n    text-align: center;\n}\n\nmat-card-header{\n    height: 50%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\nmat-card-actions{\n    position: absolute;\n    bottom: 20px;\n    left:30%\n}\n\na{\n    margin: 1.5em;\n    text-decoration: none;\n    align-items: center;\n    box-shadow: 10px black;\n}\n\nimg{\n    max-height:5em;\n    max-width: 5em;\n    -o-object-fit: contain;\n       object-fit: contain;\n}\n\n.tags{\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.tag{\n    background-color: blanchedalmond;\n    padding: 0.5em;\n    margin: 0.25em;\n    border-radius: 10px;\n    cursor:pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvamVjdHMvcHJvamVjdHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixlQUFlO0FBQ25COztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWixZQUFZO0lBQ1osYUFBYTtJQUNiLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1o7QUFDSjs7QUFHQTtJQUNJLGFBQWE7SUFDYixxQkFBcUI7SUFDckIsbUJBQW1CO0lBQ25CLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGNBQWM7SUFDZCxjQUFjO0lBQ2Qsc0JBQW1CO09BQW5CLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixlQUFlO0FBQ25COztBQUVBO0lBQ0ksZ0NBQWdDO0lBQ2hDLGNBQWM7SUFDZCxjQUFjO0lBQ2QsbUJBQW1CO0lBQ25CLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9wcm9qZWN0cy9wcm9qZWN0cy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidWx7XG4gICAgbGlzdC1zdHlsZTogbm9uZTtcbn1cblxuLmZsZXh7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbm1hdC1jYXJke1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBtYXJnaW46IDIwcHg7XG4gICAgd2lkdGg6IDI4MHB4O1xuICAgIGhlaWdodDogMzAwcHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG5tYXQtY2FyZC1oZWFkZXJ7XG4gICAgaGVpZ2h0OiA1MCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG5tYXQtY2FyZC1hY3Rpb25ze1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBib3R0b206IDIwcHg7XG4gICAgbGVmdDozMCVcbn1cblxuXG5he1xuICAgIG1hcmdpbjogMS41ZW07XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgYm94LXNoYWRvdzogMTBweCBibGFjaztcbn1cblxuaW1ne1xuICAgIG1heC1oZWlnaHQ6NWVtO1xuICAgIG1heC13aWR0aDogNWVtO1xuICAgIG9iamVjdC1maXQ6IGNvbnRhaW47XG59XG5cbi50YWdze1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiB3cmFwO1xufVxuXG4udGFne1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYW5jaGVkYWxtb25kO1xuICAgIHBhZGRpbmc6IDAuNWVtO1xuICAgIG1hcmdpbjogMC4yNWVtO1xuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gICAgY3Vyc29yOnBvaW50ZXI7XG59Il19 */";
     /***/
   },
 
@@ -2176,27 +2177,63 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../services/data.service */
     "./src/app/services/data.service.ts");
+    /* harmony import */
+
+
+    var _angular_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/animations */
+    "./node_modules/@angular/animations/fesm2015/animations.js");
+    /* harmony import */
+
+
+    var _services_helper_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../services/helper.service */
+    "./src/app/services/helper.service.ts");
+    /* harmony import */
+
+
+    var _constant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../constant */
+    "./src/app/constant.ts");
 
     var ProjectsComponent = /*#__PURE__*/function () {
-      function ProjectsComponent(http) {
+      function ProjectsComponent(http, helperService) {
         _classCallCheck(this, ProjectsComponent);
 
         this.http = http;
+        this.helperService = helperService;
+        this.isSlide = false;
       }
 
       _createClass(ProjectsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
           this.getProjects();
+          this.getCurrentSection();
+        }
+      }, {
+        key: "getCurrentSection",
+        value: function getCurrentSection() {
+          var _this6 = this;
+
+          this.helperService.getCurrentSection().subscribe(function (res) {
+            console.log(res);
+
+            if (res == _constant__WEBPACK_IMPORTED_MODULE_5__["SECTIONS"].PROJECTS) {
+              _this6.isSlide = true;
+            } else {
+              _this6.isSlide = false;
+            }
+          });
         }
       }, {
         key: "getProjects",
         value: function getProjects() {
-          var _this6 = this;
+          var _this7 = this;
 
           this.http.getProjects().then(function (response) {
             if (response.success) {
-              _this6.projects = response.data;
+              _this7.projects = response.data;
             }
           });
         }
@@ -2208,6 +2245,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     ProjectsComponent.ctorParameters = function () {
       return [{
         type: _services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
+      }, {
+        type: _services_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"]
       }];
     };
 
@@ -2216,6 +2255,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./projects.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/projects/projects.component.html"))["default"],
+      animations: [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["trigger"])('slideDisplay', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["state"])('false', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
+        opacity: 0
+      })), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('false => true', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
+        opacity: 0
+      }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])('0.5s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
+        opacity: 1
+      }))]), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('true => false', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
+        opacity: 1
+      }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])('0.2s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
+        opacity: 0
+      }))])])],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./projects.component.css */
       "./src/app/projects/projects.component.css"))["default"]]
@@ -2536,12 +2586,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SidebarComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this7 = this;
+          var _this8 = this;
 
           this.activeSection.subscribe(function (res) {
-            _this7.currentSection = res;
+            _this8.currentSection = res;
 
-            _this7.helperService.setCurrentSection(_this7.currentSection);
+            _this8.helperService.setCurrentSection(_this8.currentSection);
           });
         }
       }, {
@@ -2671,26 +2721,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getCurrentSection",
         value: function getCurrentSection() {
-          var _this8 = this;
+          var _this9 = this;
 
           this.helperService.getCurrentSection().subscribe(function (res) {
             console.log(res);
 
             if (res == _constant__WEBPACK_IMPORTED_MODULE_5__["SECTIONS"].TECHNOLOGIES) {
-              _this8.isSlide = true;
+              _this9.isSlide = true;
             } else {
-              _this8.isSlide = false;
+              _this9.isSlide = false;
             }
           });
         }
       }, {
         key: "getSkills",
         value: function getSkills() {
-          var _this9 = this;
+          var _this10 = this;
 
           this.http.getSkills().then(function (response) {
             if (response.success) {
-              _this9.skills = response.data;
+              _this10.skills = response.data;
             }
           });
         }
@@ -2717,12 +2767,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       })), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('false => true', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
         opacity: 0,
         transform: 'translateX(-100%)'
-      }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])('1s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
+      }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])('0.5s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
         opacity: 1,
         transform: 'translateX(0%)'
       }))]), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('true => false', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
         opacity: 1
-      }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])('1s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
+      }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])('0.3s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({
         opacity: 0,
         transform: 'translateX(-100%)'
       }))])])],

@@ -67,12 +67,14 @@ export class Project{
     logo:string;
     description:string;
     link:string;
+    tags:string;
 
     adapter(data:any){
-        this.name = data.name? data.name:null;
-        this.description = data.description? data.description:null;
-        this.logo = data.logo? data.logo:null;
-        this.link = data.link? data.link:null;
+        this.name = data.name ? data.name:null;
+        this.description = data.description ? data.description:null;
+        this.logo = data.logo ? data.logo:null;
+        this.link = data.link ? data.link:null;
+        this.tags = data.tags ? data.tags:null;
         return this;
     }
 }

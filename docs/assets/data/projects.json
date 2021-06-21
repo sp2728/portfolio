@@ -4,31 +4,36 @@
             "name":"Health Intel",
             "description":"",
             "logo":"assets/images/healthintel.svg",
-            "link":"http://healthIntel.herokuapp.com"
+            "link":"http://healthIntel.herokuapp.com",
+            "tags":[ "Angular", "HTML", "CSS", "Bootstrap", "Github"]
         },
         {
             "name":"Volunteer Realm",
             "description":"",
             "logo":"assets/images/volunteerrealm.jpg",
-            "link":"http://volunteerrealm.herokuapp.com"
+            "link":"http://volunteerrealm.herokuapp.com",
+            "tags":[ "Flask", "Python", "HTML", "CSS", "Bootstrap", "Github", "Gitflow"]
         },
         {
             "name":"ScholarVerse",
             "logo":"assets/images/sholarverse.png",
             "description":"",
-            "link":""
+            "link":"",
+            "tags":["Axure", "Prototype"]
         },
         {
-            "name":"",
+            "name":"Eat Cube",
             "description":"",
             "logo":"assets/images/eatcube.png",
-            "link":"https://www.eatcube.com/"
+            "link":"https://www.eatcube.com/",
+            "tags":[ "Angular", "HTML", "CSS", "Material UI", "Bitbucket"]
         },
         {
-            "name":"",
+            "name":"Referral Voodo",
             "description":"",
             "logo":"assets/images/referralvoodoo.png",
-            "link":"https://referralvoodoo.com/"
+            "link":"https://referralvoodoo.com/",
+            "tags":[ "Angular", "Nodejs", "HTML", "CSS", "Ngxbootstrap", "Gltlab"]
         }
     ]
 }

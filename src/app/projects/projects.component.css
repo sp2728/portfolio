@@ -1,7 +1,33 @@
-.container div{
+ul{
+    list-style: none;
+}
+
+.flex{
     display: flex;
     flex-wrap: wrap;
 }
+
+mat-card{
+    position: relative;
+    margin: 20px;
+    width: 280px;
+    height: 300px;
+    text-align: center;
+}
+
+mat-card-header{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-actions{
+    position: absolute;
+    bottom: 20px;
+    left:30%
+}
+
 
 a{
     margin: 1.5em;
@@ -11,8 +37,20 @@ a{
 }
 
 img{
-    display: block;
     max-height:5em;
     max-width: 5em;
     object-fit: contain;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag{
+    background-color: blanchedalmond;
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 10px;
+    cursor:pointer;
 }

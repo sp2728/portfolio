@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HelperService } from '../services/helper.service';
 
@@ -10,6 +10,10 @@ import { HelperService } from '../services/helper.service';
 export class NavbarComponent implements OnInit {
 
   currentSection:string;
+
+  navbarOpen:boolean=false;
+
+  @ViewChild('navList', {static:false}) navList:ElementRef;
   
   @Output() sectionEvent = new EventEmitter<string>();
 
@@ -32,5 +36,22 @@ export class NavbarComponent implements OnInit {
     this.currentSection = section;
     this.helperService.setCurrentSection(this.currentSection);
   }
+
+
+  toggleMenu(){
+    this.navbarOpen = !this.navbarOpen;
+    if(this.navbarOpen){
+      this.navList.nativeElement.classList.add('mobile-open');
+      this.navList.nativeElement.classList.remove('mobile-close');
+    }
+    else{
+      this.navList.nativeElement.classList.remove('mobile-open');
+      this.navList.nativeElement.classList.add('mobile-close');
+
+    }
+
+  }
+
+
 
 }

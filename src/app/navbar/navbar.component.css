@@ -1,13 +1,22 @@
 @import url('../../styles.css');
 
+.navbar{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-list{
     display: flex;
     list-style: none;
     background-color: var(--light-bg-red);
-    width: 100%;
     justify-content: space-around;
     padding: 5px 40px;
-    border-radius: 20px;
+    border-radius: 30px;
+}
+
+.menu{
+    visibility: hidden;
 }
 
 .nav-list li{
@@ -24,3 +33,32 @@
 a:hover, .active {
     color: var(--main-bg-white);
 }
+
+@media only screen and (max-width: 600px) {
+    .mobile-open{
+        flex-direction: column;
+        border-radius: 30px 30px 0 30px;
+        background-color: var(--main-bg-red);
+    }
+
+    .menu{
+        visibility: visible;
+        text-align: center;
+        float: right;
+        margin: 0 20px 20px 0;
+        background-color: var(--main-bg-red);
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .fa{
+        font-size: 32px;
+        color: var(--main-bg-white);
+    }
+
+    .mobile-close{
+        display: none;
+    }
+
+
+  }

@@ -49,6 +49,7 @@ a:hover, .active {
         background-color: var(--main-bg-red);
         padding: 10px;
         border-radius: 20px;
+        box-shadow: 3px 3px 5px var(--light-bg-red);
     }
 
     .fa{

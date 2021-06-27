@@ -14,14 +14,15 @@ export class AppComponent implements OnInit {
   sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact']
 
   constructor(
+    private _snackBar:MatSnackBar,
     private helperService:HelperService
     ) {
   }
 
   ngOnInit() {
-    // this._snackBar.open('Website is under development','OK', {
-    //   verticalPosition: 'top',
-    // })
+    this._snackBar.open('Website is under development','OK', {
+      verticalPosition: 'top',
+    })
   }
 
   getCurrentSection(){

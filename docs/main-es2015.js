@@ -463,18 +463,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_helper_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/helper.service */ "./src/app/services/helper.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
 let AppComponent = class AppComponent {
-    constructor(helperService) {
+    constructor(_snackBar, helperService) {
+        this._snackBar = _snackBar;
         this.helperService = helperService;
         this.sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact'];
     }
     ngOnInit() {
-        // this._snackBar.open('Website is under development','OK', {
-        //   verticalPosition: 'top',
-        // })
+        this._snackBar.open('Website is under development', 'OK', {
+            verticalPosition: 'top',
+        });
     }
     getCurrentSection() {
         this.helperService.getCurrentSection().subscribe((res) => {
@@ -503,6 +506,7 @@ let AppComponent = class AppComponent {
     }
 };
 AppComponent.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"] },
     { type: _services_helper_service__WEBPACK_IMPORTED_MODULE_2__["HelperService"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

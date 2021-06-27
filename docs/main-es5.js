@@ -953,20 +953,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_helper_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./services/helper.service */
     "./src/app/services/helper.service.ts");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
 
     var AppComponent = /*#__PURE__*/function () {
-      function AppComponent(helperService) {
+      function AppComponent(_snackBar, helperService) {
         _classCallCheck(this, AppComponent);
 
+        this._snackBar = _snackBar;
         this.helperService = helperService;
         this.sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact'];
       }
 
       _createClass(AppComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {// this._snackBar.open('Website is under development','OK', {
-          //   verticalPosition: 'top',
-          // })
+        value: function ngOnInit() {
+          this._snackBar.open('Website is under development', 'OK', {
+            verticalPosition: 'top'
+          });
         }
       }, {
         key: "getCurrentSection",
@@ -1027,6 +1035,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     AppComponent.ctorParameters = function () {
       return [{
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"]
+      }, {
         type: _services_helper_service__WEBPACK_IMPORTED_MODULE_2__["HelperService"]
       }];
     };

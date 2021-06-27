@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this._snackBar.open('Website is under development','OK', {
       verticalPosition: 'top',
-    })
+    });
   }
 
   getCurrentSection(){

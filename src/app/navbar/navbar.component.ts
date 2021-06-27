@@ -14,7 +14,9 @@ export class NavbarComponent implements OnInit {
   navbarOpen:boolean=false;
 
   @ViewChild('navList', {static:false}) navList:ElementRef;
-  
+
+  @ViewChild('navButton', {static:false}) navButton:ElementRef;
+
   @Output() sectionEvent = new EventEmitter<string>();
 
   constructor(
@@ -42,12 +44,11 @@ export class NavbarComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
     if(this.navbarOpen){
       this.navList.nativeElement.classList.add('mobile-open');
-      this.navList.nativeElement.classList.remove('mobile-close');
+      this.navButton.nativeElement.classList.add('open');
     }
     else{
       this.navList.nativeElement.classList.remove('mobile-open');
-      this.navList.nativeElement.classList.add('mobile-close');
-
+      this.navButton.nativeElement.classList.remove('open');
     }
 
   }

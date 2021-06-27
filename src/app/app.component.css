@@ -9,7 +9,7 @@
 .navbar{
     position: fixed;
     width: 100%;
-    z-index: 101;
+    z-index: 102;
     bottom:0;
     max-height: 400px;
 }

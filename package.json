@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "homepage":"www.saikiranportfolio.com",
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.12",

@@ -959,14 +959,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
 
     var AppComponent = /*#__PURE__*/function () {
-      function AppComponent(_snackBar, helperService) {
+      function AppComponent(_snackBar, helperService, router) {
         _classCallCheck(this, AppComponent);
 
         this._snackBar = _snackBar;
         this.helperService = helperService;
+        this.router = router;
         this.sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact'];
+        var navEndEvents = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["filter"])(function (event) {
+          return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationEnd"];
+        }));
+        navEndEvents.subscribe(function (event) {
+          gtag('config', 'UA-47058828-2');
+        });
       }
 
       _createClass(AppComponent, [{
@@ -1038,6 +1057,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"]
       }, {
         type: _services_helper_service__WEBPACK_IMPORTED_MODULE_2__["HelperService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
       }];
     };
 

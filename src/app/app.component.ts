@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HelperService } from './services/helper.service';
 import { MatSnackBar } from '@angular/material';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+declare var gtag;
 
 @Component({
   selector: 'app-root',
@@ -15,8 +18,16 @@ export class AppComponent implements OnInit {
 
   constructor(
     private _snackBar:MatSnackBar,
-    private helperService:HelperService
+    private helperService:HelperService,
+    private router:Router
     ) {
+      const navEndEvents = router.events.pipe(
+        filter(event=> event instanceof NavigationEnd),
+      );
+
+      navEndEvents.subscribe((event:NavigationEnd)=>{
+        gtag('config', 'UA-47058828-2');
+      })
   }
 
   ngOnInit() {

@@ -464,15 +464,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_helper_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/helper.service */ "./src/app/services/helper.service.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
 
 
 
 
 let AppComponent = class AppComponent {
-    constructor(_snackBar, helperService) {
+    constructor(_snackBar, helperService, router) {
         this._snackBar = _snackBar;
         this.helperService = helperService;
+        this.router = router;
         this.sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact'];
+        const navEndEvents = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["filter"])(event => event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationEnd"]));
+        navEndEvents.subscribe((event) => {
+            gtag('config', 'UA-47058828-2');
+        });
     }
     ngOnInit() {
         this._snackBar.open('Website is under development', 'OK', {
@@ -507,7 +516,8 @@ let AppComponent = class AppComponent {
 };
 AppComponent.ctorParameters = () => [
     { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"] },
-    { type: _services_helper_service__WEBPACK_IMPORTED_MODULE_2__["HelperService"] }
+    { type: _services_helper_service__WEBPACK_IMPORTED_MODULE_2__["HelperService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

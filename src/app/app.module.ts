@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { SlideFromLeftDirective } from './directives/slide-from-left.directive';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SlideFromLeftDirective } from './directives/slide-from-left.directive';
     NavbarComponent,
     HeaderComponent,
     SlideFromLeftDirective,
+    SplashScreenComponent,
   ],
   imports: [
     BrowserModule,

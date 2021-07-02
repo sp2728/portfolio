@@ -1,3 +1,8 @@
+<div class="content" *ngIf="splashOpen">
+<app-splash-screen></app-splash-screen>
+</div>
+
+<div class="content" *ngIf="!splashOpen">
 <div class="header">
   <app-header (sectionEvent)="changeSection($event)"></app-header>
 </div>
@@ -26,4 +31,5 @@
       <app-education id="education" class="wrapper"></app-education>
 
       <app-contact id="contact" class="wrapper"></app-contact>
+</div>
 </div>

@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
 
   activeSection:string;
 
+  splashOpen:boolean= true;
+
   sections = ['profile', 'technologies', 'blogs', 'projects', 'education', 'contact']
 
   constructor(
@@ -36,6 +38,10 @@ export class AppComponent implements OnInit {
     this._snackBar.open('Website is under development','OK', {
       verticalPosition: 'top',
     });
+
+    setTimeout(()=>{
+      this.splashOpen = false;
+    }, 2000);
   }
 
   getCurrentSection(){

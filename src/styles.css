@@ -11,7 +11,11 @@
 :root{
     --main-bg-red:#503D42;
     --main-bg-white:#F5FBEF;
-    --light-bg-red: rgba(80, 61, 66, 0.4)
+    --light-bg-red: rgba(80, 61, 66, 0.4);
+
+
+    --bg-black: #25252D;
+    --bg-yellow: #E6E18F;
 }
 
 html, body { height: 100%; }
@@ -21,12 +25,12 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--main-bg-white);
+    background-color: var(--bg-yellow);
 }
-
+/* 
 h1{
-    font-family: 'Caveat', cursive;
-}
+    font-family: 'Oswald', cursive;
+} */
 
 .section-heading{
     font-size: 50px;

@@ -1,6 +1,20 @@
 {
     "projects":[
         {
+            "name":"Eat Cube",
+            "description":"",
+            "logo":"assets/images/eatcube.png",
+            "link":"https://www.eatcube.com/",
+            "tags":[ "Angular", "HTML", "CSS", "Material UI", "Bitbucket"]
+        },
+        {
+            "name":"Referral Voodo",
+            "description":"",
+            "logo":"assets/images/referralvoodoo.png",
+            "link":"https://referralvoodoo.com/",
+            "tags":[ "Angular", "Nodejs", "HTML", "CSS", "Ngxbootstrap", "Gltlab"]
+        },
+        {
             "name":"Health Intel",
             "description":"",
             "logo":"assets/images/healthintel.svg",
@@ -20,20 +34,6 @@
             "description":"",
             "link":"",
             "tags":["Axure", "Prototype"]
-        },
-        {
-            "name":"Eat Cube",
-            "description":"",
-            "logo":"assets/images/eatcube.png",
-            "link":"https://www.eatcube.com/",
-            "tags":[ "Angular", "HTML", "CSS", "Material UI", "Bitbucket"]
-        },
-        {
-            "name":"Referral Voodo",
-            "description":"",
-            "logo":"assets/images/referralvoodoo.png",
-            "link":"https://referralvoodoo.com/",
-            "tags":[ "Angular", "Nodejs", "HTML", "CSS", "Ngxbootstrap", "Gltlab"]
         }
     ]
 }

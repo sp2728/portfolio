@@ -1,15 +1,60 @@
 @import url('../../styles.css');
 
-.flex{
+.container{
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.section-heading{
+    color: var(--bg-black);
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 25px;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+form{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
 .field{
     display: block;
-    width: auto;
-    margin: 10px 0;
+    width: 100%;
 }
 
 button{
     background-color: var(--main-bg-red);
     color: var(--main-bg-white);
+    border-radius: 10px;
+}
+
+.message-icon{
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+}
+
+.message-icon div{
+    border: 5px dashed #556080;
+    padding: 25px;
+    border-radius: 50%;
+
+}
+
+.message-icon img{
+    width: 350px;
+    height: 350px;
 }

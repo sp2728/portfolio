@@ -26,7 +26,9 @@ export class AppComponent implements OnInit {
       );
 
       navEndEvents.subscribe((event:NavigationEnd)=>{
-        gtag('config', 'UA-47058828-2');
+        gtag('config', 'UA-47058828-2', {
+          'page_path': event.urlAfterRedirects
+        });
       })
   }
 

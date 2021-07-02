@@ -1,35 +1,38 @@
-<div class="flex">
-    
 <div class="container">
-    <h1 class="section-heading"> Get In Touch </h1>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="content">
+        <div class="message-icon"><div><img src="../../assets/images/envelope.svg"></div>  </div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <h1 class="section-heading"> Get In Touch </h1>
+            <mat-form-field appearance="outline" class="field">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" required>
+                <mat-error *ngIf="submitted && contactForm.get('name').invalid"> {{getErrorMessage(contactForm.get('name'))}}
+                </mat-error>
+            </mat-form-field>
 
-        <mat-form-field class="field">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder="Name" formControlName="name" required>
-            <mat-error *ngIf="contactForm.get('name').invalid"> {{getErrorMessage(contactForm.get('name'))}} </mat-error>
-        </mat-form-field>
+            <mat-form-field appearance="outline" class="field">
+                <mat-label>Subject</mat-label>
+                <input matInput placeholder="Subject" formControlName="subject" required>
+                <mat-error *ngIf="submitted && contactForm.get('subject').invalid"> {{getErrorMessage(contactForm.get('subject'))}}
+                </mat-error>
+            </mat-form-field>
 
-        <mat-form-field class="field">
-            <mat-label>Subject</mat-label>
-            <input matInput placeholder="Subject" formControlName="subject" required>
-            <mat-error *ngIf="contactForm.get('subject').invalid"> {{getErrorMessage(contactForm.get('subject'))}} </mat-error>
-        </mat-form-field>
+            <mat-form-field appearance="outline" class="field">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email" required>
+                <mat-error *ngIf="submitted && contactForm.get('email').invalid"> {{getErrorMessage(contactForm.get('email'))}}
+                </mat-error>
+            </mat-form-field>
 
-        <mat-form-field class="field">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Email" formControlName="email" required>
-            <mat-error *ngIf="contactForm.get('email').invalid"> {{getErrorMessage(contactForm.get('email'))}} </mat-error>
-        </mat-form-field>
+            <mat-form-field appearance="outline" class="field">
+                <mat-label>Message</mat-label>
+                <textarea matInput placeholder="Enter your message" rows=5 formControlName="message"
+                    required></textarea>
+                <mat-error *ngIf="submitted && contactForm.get('message').invalid"> {{getErrorMessage(contactForm.get('message'))}}
+                </mat-error>
+            </mat-form-field>
 
-        <mat-form-field class="field">
-            <mat-label>Message</mat-label>
-            <textarea matInput placeholder="Enter your message" rows=5 formControlName="message" required></textarea>
-            <mat-error *ngIf="contactForm.get('message').invalid"> {{getErrorMessage(contactForm.get('message'))}} </mat-error>
-        </mat-form-field>
-
-        <button mat-raised-button type="submit" [disabled]="contactForm.invalid"> {{'Submit' | uppercase}} </button>
-    </form>
-</div>
-
+            <button mat-raised-button type="submit"> {{'Submit'}} </button>
+        </form>
+    </div>
 </div>

@@ -1,11 +1,23 @@
 .container{
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../../assets/images/bg-education.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.section-heading{
+ color: var(--bg-yellow);
+ text-align: center;   
 }
 
 .school{
     display: grid;
     grid-template-columns: 2fr 2fr;
+    max-width: 1024px;
+    color: var(--bg-yellow);
 }
 
 .school div{
@@ -22,7 +34,8 @@
 }
 
 .course{
-    background-color: blanchedalmond;
+    background-color: var(--bg-yellow);
+    color: var(--bg-black);
     padding: 0.5em;
     margin: 0.25em;
     border-radius: 10px;

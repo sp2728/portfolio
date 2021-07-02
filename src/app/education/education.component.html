@@ -1,7 +1,8 @@
 <div class="container">
-  <h1 class="section-heading"> Education </h1>
-  <ul>
-    <li class="school" *ngFor="let school of schools">
+  <div>
+    <h1 class="section-heading"> Education </h1>
+
+    <div class="school" *ngFor="let school of schools">
       <div>
         <h2> {{school.name | uppercase}} </h2>
         <div class="courses">
@@ -13,6 +14,6 @@
         <p> Major: {{school.major}}</p>
         <p> Duration: {{school.startDate}} - {{school.endDate}} </p>
       </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>

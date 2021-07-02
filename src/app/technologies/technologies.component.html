@@ -1,6 +1,6 @@
-<div class="container" [@slideFromLeft]="isSlide">
-    <h1 class="section-heading"> Technological Experience </h1>
-    <div class="flex">
+<div class="container">
+    <h1 class="section-heading"> Technological Expertise </h1>
+    <div class="flex" [@slideFromLeft]="isSlide">
         <mat-card class="skills" *ngFor="let skill of skills">
             <img src="{{skill.logo}}" matTooltip="{{skill.name}}">
         </mat-card>

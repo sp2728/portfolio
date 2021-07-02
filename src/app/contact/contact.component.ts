@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
   messageInfo: MessageInfo;
+  submitted:boolean = false;
 
   constructor(
     private fb:FormBuilder,
@@ -46,10 +47,14 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(){
+    this.submitted = true;
     if(this.contactForm.valid){
       this.messageInfo = this.contactForm.value;
 
+      this.submitted = false;
+
       this.contactForm.reset();
+      this.contactForm.clearValidators();
 
       this._snackBar.open('Message Submitted', 'Close', {
         duration:2000

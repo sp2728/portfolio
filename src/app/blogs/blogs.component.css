@@ -1,11 +1,30 @@
 @import url('../../styles.css');
 
+
+.container{
+    height: 100%;
+}
+
+.blogs{
+    width: 100%;
+}
+
+.blogs div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.certifications div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 mat-card{
     margin: 1em;
     width: 200px;
-    height: 75px;
     background:rgb(255, 255, 255, 0.8);
     color: black;
+    text-align: center;
 }
 
 a{
@@ -14,11 +33,5 @@ a{
     color: tomato;
 }
 
-.container div{
-    display: flex;
-
-    flex-wrap: wrap;
-
-}
 
 

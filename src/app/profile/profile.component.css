@@ -1,55 +1,160 @@
 .container{
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-black)
 }
 
 .flex{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: row-reverse;
+  height: 100%;
+}
+
+.image{
+  width: 40%;
+  text-align: center;
+  margin-bottom: auto;
+  z-index: 5;
+}
+
+img{
+  background-size: cover;
+  height: 100vh;
+  z-index: 100;
 }
 
 
 .profile{
-  width: 350px;
-  padding: 30px 0;  
-  text-align: center;
+  flex-grow: 1;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-img{
-  height: 400px;
-  top: 0;
-  right: 40%;
+.profile div{
+  max-width: 600px;
+  text-align: center;
+  align-items: center;
+}
+
+.skill{
+  font-size: 24px;
+  color: var(--bg-yellow);
+  text-decoration: underline;
+  letter-spacing: 3px;
+  padding: 20px 0;
+}
+
+.name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .intro{
-    font-size: 18px;
-    width: 32ch;
+    font-size: 24px;
+    padding: 20px 0;
+    font-weight: bolder;
+    color: #FFF4E4;
+    width: 16ch;
     height: 30px;
-    animation: typing 3s steps(32), blink 1s step-end infinite alternate;
+    animation: typing 3s steps(16), blink 0.2s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
 }
 
-.description{
-  font-size: large;
-}
-
-.section-heading{
-  text-align: center;
-}
-
 @keyframes typing {
-    from {
-      width: 0
-    }
+  from {
+    width: 0
   }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
+}
+
+.description{
+  font-size: 20px;
+  color: #CFD8D7;
+  padding: 20px 0;
+
+}
+
+.yellow-block-top, .yellow-block-bottom{
+  height: 250px;
+  width: 250px;
+  background-color: var(--bg-yellow);
+  border-radius: 50px;
+}
+
+.yellow-block-top{
+  transform: rotate(45deg);
+  position:absolute;
+  top:-15%;
+  left:-5%;
+  overflow:hidden;
+}
+
+.yellow-block-bottom{
+  transform: rotate(45deg);
+  position:absolute;
+  bottom:-15%;
+  left:-5%;
+  overflow:hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .flex{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .image{
+    width: 100%;
+    height: 50%;
+  }
+
+  .profile{
+    height: 50%;
+    justify-content: start;
+  }
+
+  img{
+   max-width: 300px;
+   max-height: 300px;
+   object-fit: cover;
+  }
+  
+  .yellow-block-top, .yellow-block-bottom
+  {
+    height: 200px;
+    width: 200px;
+  }
+
+  .yellow-block-top{
+    transform: rotate(90deg);
+    left: auto;
+    right: -50px;
+    top: 15%;
+  }
+
+  .yellow-block-bottom{
+    transform: rotate(90deg);
+    right: auto;
+    left: -50px;
+    top: 15%;
+  }
+
+
+
+}

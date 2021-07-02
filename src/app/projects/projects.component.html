@@ -2,18 +2,31 @@
   <h1 class="section-heading"> Projects </h1>
   <div class="flex">
     <mat-card *ngFor="let project of projects" [@slideDisplay]="isSlide">
-      <mat-card-header>
-        <img src="{{project.logo}}">
-      </mat-card-header>
-      <mat-card-content>
-        <h2>{{project.name}}</h2>
-        <div class="flex">
-          <span class="tag" *ngFor="let tag of project.tags">{{tag}}</span>
+      <div class="card">
+        <mat-card-header>
+          <img src="{{project.logo}}">
+        </mat-card-header>
+        <mat-card-content>
+          <h1>{{project.name}}</h1>
+          <div class="tags">
+            <div class="flex">
+              <span class="tag" *ngFor="let tag of project.tags">{{tag}}</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </div>
+      <div class="content">
+        <div>
+          <h2> Project Info </h2>
+          <span> Project Details Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores corrupti pariatur
+            expedita totam doloribus numquam omnis reiciendis dicta? Rerum, nesciunt excepturi. Architecto.</span > 
+            <mat-card-actions>
+              <a mat-raised-button href="{{project.link}}" target="_blank"> View Project </a>
+            </mat-card-actions>
         </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button href="{{project.link}}" target="_blank"> View Project </a>
-      </mat-card-actions>
+
+      </div>
+
     </mat-card>
   </div>
 </div>

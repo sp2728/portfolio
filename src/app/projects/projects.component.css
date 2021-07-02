@@ -1,18 +1,64 @@
-ul{
-    list-style: none;
+.container{
+    background-color: var(--bg-black);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-heading{
+    color: var(--bg-yellow);
 }
 
 .flex{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    flex-grow: 1;
 }
 
 mat-card{
     position: relative;
     margin: 20px;
-    width: 280px;
-    height: 300px;
+    width: 250px;
+    height: 280px;
     text-align: center;
+    background-color: whitesmoke;
+}
+
+.card{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 80%;
+    transition: 1s all ease-in-out;
+}
+
+.card:hover{
+    opacity: 0;
+}
+
+.content{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 0;
+    transition: 0.5s;
+    overflow:hidden;
+    background-color: var(--bg-yellow);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card:hover .content{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
 }
 
 mat-card-header{
@@ -22,18 +68,22 @@ mat-card-header{
     align-items: center;
 }
 
-mat-card-actions{
-    position: absolute;
-    bottom: 20px;
-    left:30%
+mat-card-content{
+    height: 50%;
+    position: relative;
 }
 
+mat-card-content .tags{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 a{
     margin: 1.5em;
     text-decoration: none;
     align-items: center;
-    box-shadow: 10px black;
 }
 
 img{

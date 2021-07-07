@@ -18,8 +18,11 @@
       <div class="content">
         <div>
           <h2> Project Info </h2>
-          <span> Project Details Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores corrupti pariatur
-            expedita totam doloribus numquam omnis reiciendis dicta? Rerum, nesciunt excepturi. Architecto.</span > 
+          <ul>
+            <li *ngFor="let data of project.description">
+              {{data}}
+            </li>
+          </ul>
             <mat-card-actions>
               <a mat-raised-button href="{{project.link}}" target="_blank"> View Project </a>
             </mat-card-actions>

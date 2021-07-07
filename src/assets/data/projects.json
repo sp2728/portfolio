@@ -2,31 +2,48 @@
     "projects":[
         {
             "name":"Eat Cube",
-            "description":"",
+            "description":[
+                "Worked on implementing the frontend part of the application",
+                "Responsible for creating reusable components using rxjs functionalities"
+            ],
             "logo":"assets/images/eatcube.png",
             "link":"https://www.eatcube.com/",
             "tags":[ "Angular", "HTML", "CSS", "Material UI", "Bitbucket"]
         },
         {
             "name":"Referral Voodo",
-            "description":"",
+            "description":[
+                "Responsible for implementing various features in both frontend and backend part of the referral voodoo applicaiton",
+                "Responsible for testing the messaging and email functionality of the referral voodoo application"
+            ],
             "logo":"assets/images/referralvoodoo.png",
             "link":"https://referralvoodoo.com/",
             "tags":[ "Angular", "Nodejs", "HTML", "CSS", "Ngxbootstrap", "Gltlab"]
         },
         {
             "name":"Health Intel",
-            "description":"",
+            "description":[
+                "Web application to access the mental well-being of older adults based on building a set of questionnaires. Built using Angular 6, HTML, CSS, Bootstrap",
+                "Responsible to for writing the User Stories for sprints to implement various features in the application",
+                "Responsible for implementing the complete frontend application using Angular framework",
+                "Designed and developed the application dashboard with various metrics including the graphs and chatbot"
+            ],
             "logo":"assets/images/healthintel.svg",
             "link":"http://healthIntel.herokuapp.com",
             "tags":[ "Angular", "HTML", "CSS", "Bootstrap", "Github"]
         },
         {
             "name":"Volunteer Realm",
-            "description":"",
+            "description":[
+                "A Web application to apply volunteer opportunities for various organizations. Built using Python, Flask and SqlAlchemy",
+                "Worked on implementation of multi user authentication and state management of the application",
+                "Worked on SQLAlchemy as ORM to write the RESTFUL API’s for the application",
+                "Responsible for design of the complete application using HTML, CSS, Bootstrap and Flask",
+                "Implemented the Travis CI as the continuous integration to check the build to pass all the test cases"
+            ],
             "logo":"assets/images/volunteerrealm.jpg",
             "link":"http://volunteerrealm.herokuapp.com",
-            "tags":[ "Flask", "Python", "HTML", "CSS", "Bootstrap", "Github", "Gitflow"]
+            "tags":[ "Flask", "Python", "HTML", "CSS", "Bootstrap", "Github", "Gitflow", "Travis CI"]
         },
         {
             "name":"ScholarVerse",

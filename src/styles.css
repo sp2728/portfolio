@@ -35,7 +35,6 @@ h1{
 .section-heading{
     font-size: 50px;
     color: var(--main-bg-red);
-    line-height: 2em;
     letter-spacing: 0.05em;
 }
 

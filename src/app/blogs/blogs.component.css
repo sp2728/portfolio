@@ -1,20 +1,17 @@
 @import url('../../styles.css');
 
-
 .container{
-    height: 100%;
-}
-
-.blogs{
-    width: 100%;
-}
-
-.blogs div {
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.certifications div {
+.container div:first-child{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.blogs div, .certifications div  {
     display: flex;
     flex-wrap: wrap;
 }

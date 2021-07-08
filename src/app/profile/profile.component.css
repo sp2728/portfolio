@@ -1,8 +1,11 @@
 .container{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  min-height: calc(100vh - 50px);
+  padding: 50px 10px;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--bg-black)
 }
 
@@ -22,14 +25,13 @@
 
 img{
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   z-index: 100;
 }
 
 
 .profile{
   flex-grow: 1;
-  padding: 0 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;

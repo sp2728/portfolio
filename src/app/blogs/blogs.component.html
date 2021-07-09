@@ -1,21 +1,27 @@
 <div class="container">
-    <div>
-    <div class="blogs">
-        <h1 class="section-heading"> Blogs </h1>
-        <div>
-            <mat-card *ngFor="let blog of blogs">
-                <a href="{{blog.link}}" target="_blank">{{blog.name}}</a>
-            </mat-card>
+    <div class="content">
+        <div class="blogs">
+            <h1 class="section-heading"> Blogs </h1>
+            <div class="flex">
+                <mat-card *ngFor="let blog of blogs">
+                    <a href="{{blog.link}}" target="_blank">
+                        {{blog.name}}
+                        <i class="fa fa-external-link"></i>
+                    </a>
+                </mat-card>
+            </div>
         </div>
-    </div>
 
-    <div class="certifications">
-        <h1 class="section-heading"> Certifications </h1> <span class="certificate-icon"></span> 
-        <div>
-            <mat-card *ngFor="let certificate of certifications">
-                <a href="{{certificate.link}}" target="_blank">{{certificate.name}}</a>
-            </mat-card>
+        <div class="certifications">
+            <h1 class="section-heading"> Certifications </h1> <span class="certificate-icon"></span>
+            <div class="flex">
+                <mat-card *ngFor="let certificate of certifications">
+                    <a href="{{certificate.link}}" target="_blank">
+                       <span>{{certificate.name}} </span> 
+                        <i class="fa fa-external-link"></i>
+                    </a>
+                </mat-card>
+            </div>
         </div>
     </div>
-</div>
 </div>

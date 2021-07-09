@@ -1,35 +1,27 @@
 <div class="content" *ngIf="splashOpen">
-<app-splash-screen></app-splash-screen>
+  <app-splash-screen></app-splash-screen>
 </div>
 
 <div class="content" *ngIf="!splashOpen">
-<div class="header">
-  <app-header (sectionEvent)="changeSection($event)"></app-header>
-</div>
-
-<div class="navbar">
-  <app-navbar class="navbar" (sectionEvent)="changeSection($event)"></app-navbar>
-</div>
-
-<!-- <div class="socialMedia">
-  <div class="follow">Follow Me</div>
-  <div class="icons">
-    <a class="media fa fa-linkedin" href="https://www.linkedin.com/in/saikiran1298/" target="_blank"></a>
-    <a class="media fa fa-medium" href="https://saikiran1298.medium.com" target="_blank"></a>
+  <div class="header">
+    <app-header (sectionEvent)="changeSection($event)"></app-header>
   </div>
-</div> -->
 
-<div class="main-content" id="main" (scroll)="keepTrack()">
-      <app-profile id="profile" class="wrapper"></app-profile>
+  <div class="navbar">
+    <app-navbar class="navbar" (sectionEvent)="changeSection($event)"></app-navbar>
+  </div>
 
-      <app-technologies id="technologies" class="wrapper"></app-technologies>
+  <div class="main-content" id="main" (scroll)="keepTrack()">
+    <app-profile id="profile" class="wrapper"></app-profile>
 
-      <app-blogs id="blogs" class="wrapper"></app-blogs>
+    <app-technologies id="technologies" class="wrapper"></app-technologies>
 
-      <app-projects id="projects" class="wrapper"></app-projects>
+    <app-blogs id="blogs" class="wrapper"></app-blogs>
 
-      <app-education id="education" class="wrapper"></app-education>
+    <app-projects id="projects" class="wrapper"></app-projects>
 
-      <app-contact id="contact" class="wrapper"></app-contact>
-</div>
+    <app-education id="education" class="wrapper"></app-education>
+
+    <app-contact id="contact" class="wrapper"></app-contact>
+  </div>
 </div>

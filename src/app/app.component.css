@@ -1,7 +1,6 @@
 @import url('../styles.css');
 
 .content{
-    min-height: 100vh;
     overflow:hidden;
 }
 

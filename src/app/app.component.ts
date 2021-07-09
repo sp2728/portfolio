@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
 
     setTimeout(()=>{
       this.splashOpen = false;
-    }, 2000);
+    });
   }
 
   getCurrentSection(){

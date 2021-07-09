@@ -1,6 +1,5 @@
 .container{
-  min-height: calc(100vh - 60px);
-  padding: 50px 10px;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -27,11 +26,12 @@
 .content{
   height: 100%;
   text-align: center;
+  padding: 0 20px;
 }
 
 img{
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -83,7 +83,7 @@ img{
 
 }
 
-.yellow-block-top, .yellow-block-bottom{
+.yellow-block-top, .yellow-block-bottom, .yellow-block-bottom-r, .yellow-block-top-r{
   height: 250px;
   width: 250px;
   background-color: var(--bg-yellow);
@@ -106,21 +106,35 @@ img{
   overflow:hidden;
 }
 
+.yellow-block-top-r{
+  transform: rotate(45deg);
+  position:absolute;
+  top:-15%;
+  right:-5%;
+  overflow:hidden;
+}
+
+.yellow-block-bottom-r{
+  transform: rotate(45deg);
+  position:absolute;
+  bottom:-15%;
+  right:-5%;
+  overflow:hidden;
+}
+
 @media only screen and (max-width: 1200px) {
 
-  /* .content{
-    z-index: 10;
-  }  
-   */
-  .yellow-block-top, .yellow-block-bottom
-  {
+
+
+
+   .yellow-block-top, .yellow-block-bottom, .yellow-block-bottom-r, .yellow-block-top-r{
     /* z-index: 0;
     height: 200px;
     width: 200px; */
     display: none;
   }
-/* 
-  .yellow-block-top{
+
+  /* .yellow-block-top{
     transform: rotate(90deg);
     left: auto;
     right: -50px;
@@ -132,7 +146,7 @@ img{
     right: auto;
     left: -50px;
     top: 15%;
-  } */
+  }  */
 
 
 

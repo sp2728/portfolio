@@ -1,7 +1,8 @@
 <div class="container">
   <!-- <h1 class="section-heading"> Profile </h1> -->
 
-  <div class="flex" *ngIf="profile">
+  <div class="content" *ngIf="profile">
+
     <div class="image">
       <img src="{{profile.image}}" />
     </div>
@@ -22,7 +23,11 @@
       </div>
     </div>
 
-
+    <div class="social">
+      <span> Follow me @ </span>
+        <a class="media fa fa-linkedin" href="https://www.linkedin.com/in/saikiran1298/" target="_blank"></a>
+        <a class="media fa fa-medium" href="https://saikiran1298.medium.com" target="_blank"></a>
+    </div>
   </div>
 
   <div class="yellow">

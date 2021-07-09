@@ -36,21 +36,6 @@ img{
   border-radius: 50%;
 }
 
-
-.profile{
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile div{
-  max-width: 600px;
-  text-align: center;
-  align-items: center;
-}
-
 .skill{
   font-size: 24px;
   color: var(--bg-yellow);
@@ -123,33 +108,18 @@ img{
 
 @media only screen and (max-width: 1200px) {
 
-  .flex{
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .image{
-    width: 100%;
-    height: 50%;
-  }
-
-  .profile{
-    height: 50%;
-    justify-content: start;
-  }
-
-  img{
-   max-width: 300px;
-   max-height: 300px;
-   object-fit: cover;
-  }
+  .content{
+    z-index: 10;
+  }  
   
   .yellow-block-top, .yellow-block-bottom
   {
+    /* z-index: 0;
     height: 200px;
-    width: 200px;
+    width: 200px; */
+    display: none;
   }
-
+/* 
   .yellow-block-top{
     transform: rotate(90deg);
     left: auto;
@@ -162,7 +132,7 @@ img{
     right: auto;
     left: -50px;
     top: 15%;
-  }
+  } */
 
 
 

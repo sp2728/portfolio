@@ -1,5 +1,5 @@
 .container{
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 60px);
   padding: 50px 10px;
   position: relative;
   overflow: hidden;
@@ -108,10 +108,10 @@ img{
 
 @media only screen and (max-width: 1200px) {
 
-  .content{
+  /* .content{
     z-index: 10;
   }  
-  
+   */
   .yellow-block-top, .yellow-block-bottom
   {
     /* z-index: 0;

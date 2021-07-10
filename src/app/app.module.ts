@@ -8,7 +8,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatTooltipModule } from '@angular/material';
+import { MatBottomSheetModule, MatBottomSheetRef, MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatSnackBarModule, MatTooltipModule, MAT_BOTTOM_SHEET_DATA, MAT_DIALOG_DATA } from '@angular/material';
 import { BlogsComponent } from './blogs/blogs.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -17,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { SlideFromLeftDirective } from './directives/slide-from-left.directive';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { ProjectInfoComponent } from './project-info/project-info.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SplashScreenComponent } from './splash-screen/splash-screen.component';
     HeaderComponent,
     SlideFromLeftDirective,
     SplashScreenComponent,
+    ProjectInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,9 +46,19 @@ import { SplashScreenComponent } from './splash-screen/splash-screen.component';
     MatButtonModule,
     MatInputModule,
     MatSnackBarModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatBottomSheetModule,
     MatTooltipModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: MatBottomSheetRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MAT_BOTTOM_SHEET_DATA, useValue: {} },
+  ],
+  bootstrap: [AppComponent],
+  entryComponents:[
+    ProjectInfoComponent
+  ]
 })
 export class AppModule { }

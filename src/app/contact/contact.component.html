@@ -1,7 +1,7 @@
 <div class="container">
     <div class="content">
         <div class="message-icon"><img src="../../assets/images/envelope.svg"></div>
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(formDirective)" #formDirective="ngForm">
             <h1 class="section-heading"> Get In Touch </h1>
             <mat-form-field appearance="outline" class="field">
                 <mat-label>Name</mat-label>

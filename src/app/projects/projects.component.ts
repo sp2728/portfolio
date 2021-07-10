@@ -1,10 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Project } from '../models/data.model';
 import { DataService } from '../services/data.service';
 import { trigger, transition, animate, style, state } from '@angular/animations'
 import { HelperService } from '../services/helper.service';
 import { SECTIONS } from '../constant';
+import { MatBottomSheet, MatDialog, MatSnackBar } from '@angular/material';
+import { ProjectInfoComponent } from '../project-info/project-info.component';
 
+export enum ScreenSize {
+  //XS,MD,LG,XL
+  mobile = "mobile",
+  web = "web"
+}
 
 @Component({
   selector: 'app-projects',
@@ -30,9 +37,13 @@ export class ProjectsComponent implements OnInit {
 
   isSlide:boolean = false;
 
+  @ViewChild('projectInfo', { static: false }) projectInfo!: TemplateRef<any>;
+
   constructor(
     private http:DataService,
-    private helperService:HelperService
+    private helperService:HelperService,
+    private dialog:MatDialog,
+    private bottomSheet:MatBottomSheet
     ) { }
 
   ngOnInit() {
@@ -42,7 +53,6 @@ export class ProjectsComponent implements OnInit {
 
   getCurrentSection(){
     this.helperService.getCurrentSection().subscribe(res=>{
-      console.log(res);
       if(res==SECTIONS.PROJECTS){
         this.isSlide = true;
       }
@@ -59,6 +69,25 @@ export class ProjectsComponent implements OnInit {
         this.projects = response.data;
       }
     })
+  }
+
+  openInfo(project:Project){
+    let size = (window.innerWidth < 800) ? ScreenSize.mobile : ScreenSize.web;
+
+    if(size ==  ScreenSize.web){
+      this.dialog.open(ProjectInfoComponent,{
+        data:{project},
+        backdropClass: 'backdropBackground',
+        panelClass: 'panelClass'
+      })
+    }
+    else if(size == ScreenSize.mobile){
+      this.bottomSheet.open(ProjectInfoComponent, {
+        data:{project},
+        backdropClass: 'backdropBackground',
+      })
+    }
+
   }
 
 }

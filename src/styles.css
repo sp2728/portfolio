@@ -41,3 +41,9 @@ h1{
 .cotainer-padding{
     padding: 20px;
 }
+
+.backdropBackground {
+    filter: blur(20px);
+    background-color: var(--bg-yellow);
+    opacity: 0.7 !important;
+  }

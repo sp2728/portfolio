@@ -41,7 +41,6 @@ export class TechnologiesComponent implements OnInit {
 
   getCurrentSection(){
     this.helperService.getCurrentSection().subscribe(res=>{
-      console.log(res);
       if(res==SECTIONS.TECHNOLOGIES){
         this.isSlide = true;
       }

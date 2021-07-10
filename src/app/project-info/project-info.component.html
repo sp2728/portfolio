@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 mat-dialog-title> Project Info </h1>
+    <div mat-dialog-content>
+        <h2> Project Title: <span> {{data.name}}</span></h2>
+        <p *ngFor="let val of data.description"> {{val}} </p>
+    </div>
+    <div mat-dialog-actions *ngIf="isDialog">
+        <button mat-button [mat-dialog-close] cdkFocusInitial (click)="closePopup()">Close</button>
+    </div>
+</div>

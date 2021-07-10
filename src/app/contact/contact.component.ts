@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 
 export interface MessageInfo{
@@ -18,6 +18,9 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   messageInfo: MessageInfo;
   submitted:boolean = false;
+
+  @ViewChild('formDirective', {static:false}) private formDirective: NgForm;
+
 
   constructor(
     private fb:FormBuilder,
@@ -54,11 +57,12 @@ export class ContactComponent implements OnInit {
       this.submitted = false;
 
       this.contactForm.reset();
-      this.contactForm.clearValidators();
 
+      this.formDirective.resetForm();
+      
       this._snackBar.open('Message Submitted', 'Close', {
         duration:2000
-      })
+      });
     }
   }
 

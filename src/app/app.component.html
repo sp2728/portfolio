@@ -11,7 +11,7 @@
     <app-navbar class="navbar" (sectionEvent)="changeSection($event)"></app-navbar>
   </div>
 
-  <div class="main-content" id="main" (scroll)="keepTrack()">
+  <div class="main-content"(scroll)="keepTrack()">
     <app-profile id="profile" class="wrapper"></app-profile>
 
     <app-technologies id="technologies" class="wrapper"></app-technologies>

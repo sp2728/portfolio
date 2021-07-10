@@ -1036,13 +1036,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this = this;
 
-          this._snackBar.open('Website is under development', 'OK', {
-            verticalPosition: 'top'
-          });
-
+          // this._snackBar.open('Website is under development','OK', {
+          //   verticalPosition: 'top',
+          // });
           setTimeout(function () {
             _this.splashOpen = false;
-          });
+          }, 2000);
         }
       }, {
         key: "getCurrentSection",

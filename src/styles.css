@@ -26,10 +26,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-yellow);
 }
-/* 
-h1{
-    font-family: 'Oswald', cursive;
-} */
+
+.wrapper{
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .section-heading{
     font-size: 50px;

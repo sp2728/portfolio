@@ -1,10 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
+import { map } from 'rxjs/internal/operators/map';
 
 export interface MessageInfo{
   name:string;
   email:string;
+  subject:string;
   message:string;
 }
 
@@ -24,7 +27,8 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private fb:FormBuilder,
-    private _snackBar:MatSnackBar
+    private _snackBar:MatSnackBar,
+    private http: HttpClient
   ) { }
 
   ngOnInit() {
@@ -53,16 +57,27 @@ export class ContactComponent implements OnInit {
     this.submitted = true;
     if(this.contactForm.valid){
       this.messageInfo = this.contactForm.value;
+      this.http.post('https://formspree.io/mayplzlg', this.messageInfo).subscribe((res:any)=>{
+        console.log(res)
 
-      this.submitted = false;
+        if(res.ok){
+          this.submitted = false;
 
-      this.contactForm.reset();
+          this.contactForm.reset();
+    
+          this.formDirective.resetForm();
+          this._snackBar.open('I have recieved your message. Will get back to you shortly', 'OK', {
+            duration:2000
+          });
+        }
 
-      this.formDirective.resetForm();
-      
-      this._snackBar.open('Message Submitted', 'Close', {
-        duration:2000
-      });
+        else{
+          this._snackBar.open('Unable process the request. Please submit again', 'Close', {
+            duration:2000
+          });
+        }
+      })
+
     }
   }
 

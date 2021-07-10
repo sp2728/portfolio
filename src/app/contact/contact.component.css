@@ -1,11 +1,5 @@
 @import url('../../styles.css');
 
-.container{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .section-heading{
     color: var(--bg-black);
@@ -42,9 +36,7 @@ button{
 }
 
 .message-icon {
-    border: 5px dashed #556080;
     padding: 25px;
-    border-radius: 50%;
     text-align: center;
     align-items: center;
     flex-grow: 1;
@@ -58,4 +50,7 @@ button{
 .message-icon img{
     width: 100%;
     height: auto;
+    border: 5px dashed #556080;
+    border-radius: 50%;
+
 }
